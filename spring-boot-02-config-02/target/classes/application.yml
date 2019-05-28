@@ -1,0 +1,22 @@
+
+#  yml 文件  支持多文档块
+server:
+  port: 8081     #  默认配置的端口号
+
+spring:
+  profiles:
+    active: prod     #  在主文档块中指定激活哪个环境   如果不写  则激活默认的
+
+
+---
+server:
+     port: 8082
+spring:
+  profiles: dev       #  指定属于哪个环境   当前是dev环境
+
+
+---
+server:
+  port: 8083
+spring:
+  profiles: prod       #   表示为生产环境

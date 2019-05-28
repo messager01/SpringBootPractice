@@ -1,0 +1,20 @@
+2019-05-28 19:49:25.531  INFO 12684 --- [main] .m.s.SpringBoot03LoggingApplicationTests : Starting SpringBoot03LoggingApplicationTests on LAPTOP-TQCNLE9Q with PID 12684 (started by HX in F:\淘宝教育\SpringBootPractice\spring-boot-03-logging)
+2019-05-28 19:49:25.532 DEBUG 12684 --- [main] .m.s.SpringBoot03LoggingApplicationTests : Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2019-05-28 19:49:25.533  INFO 12684 --- [main] .m.s.SpringBoot03LoggingApplicationTests : No active profile set, falling back to default profiles: default
+2019-05-28 19:49:27.934  INFO 12684 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 19:49:28.175  INFO 12684 --- [main] .m.s.SpringBoot03LoggingApplicationTests : Started SpringBoot03LoggingApplicationTests in 2.95 seconds (JVM running for 3.789)
+2019-05-28 19:49:28.324 DEBUG 12684 --- [main] .m.s.SpringBoot03LoggingApplicationTests : 这是debug信息
+2019-05-28 19:49:28.325  INFO 12684 --- [main] .m.s.SpringBoot03LoggingApplicationTests : 这是info日志信息
+2019-05-28 19:49:28.325  WARN 12684 --- [main] .m.s.SpringBoot03LoggingApplicationTests : warn 日志信息
+2019-05-28 19:49:28.325 ERROR 12684 --- [main] .m.s.SpringBoot03LoggingApplicationTests : error  信息
+2019-05-28 19:49:28.329  INFO 12684 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-28 19:50:00.080  INFO 11432 --- [main] .m.s.SpringBoot03LoggingApplicationTests : Starting SpringBoot03LoggingApplicationTests on LAPTOP-TQCNLE9Q with PID 11432 (started by HX in F:\淘宝教育\SpringBootPractice\spring-boot-03-logging)
+2019-05-28 19:50:00.081 DEBUG 11432 --- [main] .m.s.SpringBoot03LoggingApplicationTests : Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2019-05-28 19:50:00.081  INFO 11432 --- [main] .m.s.SpringBoot03LoggingApplicationTests : No active profile set, falling back to default profiles: default
+2019-05-28 19:50:02.326  INFO 11432 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-28 19:50:02.551  INFO 11432 --- [main] .m.s.SpringBoot03LoggingApplicationTests : Started SpringBoot03LoggingApplicationTests in 2.758 seconds (JVM running for 3.497)
+2019-05-28 19:50:02.670 DEBUG 11432 --- [main] .m.s.SpringBoot03LoggingApplicationTests : 这是debug信息
+2019-05-28 19:50:02.670  INFO 11432 --- [main] .m.s.SpringBoot03LoggingApplicationTests : 这是info日志信息
+2019-05-28 19:50:02.670  WARN 11432 --- [main] .m.s.SpringBoot03LoggingApplicationTests : warn 日志信息
+2019-05-28 19:50:02.670 ERROR 11432 --- [main] .m.s.SpringBoot03LoggingApplicationTests : error  信息
+2019-05-28 19:50:02.674  INFO 11432 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

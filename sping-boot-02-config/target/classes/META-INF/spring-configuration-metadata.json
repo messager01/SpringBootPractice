@@ -1,0 +1,52 @@
+{
+  "groups": [
+    {
+      "name": "emp",
+      "type": "com.mengxuegu.bean.Emp",
+      "sourceType": "com.mengxuegu.bean.Emp"
+    }
+  ],
+  "properties": [
+    {
+      "name": "emp.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.mengxuegu.bean.Emp"
+    },
+    {
+      "name": "emp.birthday",
+      "type": "java.util.Date",
+      "sourceType": "com.mengxuegu.bean.Emp"
+    },
+    {
+      "name": "emp.boss",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.mengxuegu.bean.Emp"
+    },
+    {
+      "name": "emp.forte",
+      "type": "com.mengxuegu.bean.Forte",
+      "sourceType": "com.mengxuegu.bean.Emp"
+    },
+    {
+      "name": "emp.last-name",
+      "type": "java.lang.String",
+      "sourceType": "com.mengxuegu.bean.Emp"
+    },
+    {
+      "name": "emp.list",
+      "type": "java.util.List",
+      "sourceType": "com.mengxuegu.bean.Emp"
+    },
+    {
+      "name": "emp.map",
+      "type": "java.util.Map",
+      "sourceType": "com.mengxuegu.bean.Emp"
+    },
+    {
+      "name": "emp.salary",
+      "type": "java.lang.Double",
+      "sourceType": "com.mengxuegu.bean.Emp"
+    }
+  ],
+  "hints": []
+}

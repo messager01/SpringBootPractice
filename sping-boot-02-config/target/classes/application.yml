@@ -1,0 +1,23 @@
+#   默认字符串是不用加引号的
+#  如果给字符串加上双引号  会转义字符串中的特殊字符
+#  加上单引号  不转义特殊字符
+server:
+  port: 8088
+
+#   emp  的配置数据      list 实质上是个数组
+#emp:
+#  lastName: shipeixin
+#  age: 24
+#  salary: 20000
+#  boss: true
+#  birthday: 1995/01/25
+#  map:
+#    key1: value1
+#    key2: value2
+#  list:
+#    - one
+#    - two
+#    - three
+#  forte:
+#    name: java
+#    time: 1

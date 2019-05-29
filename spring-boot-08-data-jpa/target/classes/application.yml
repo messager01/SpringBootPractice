@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/jpa?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+#jpa 相关配置  和hibernate 一样  创建或更新数据表
+  jpa:
+    hibernate:
+      ddl-auto: update
+      #打印sql语句
+    show-sql: true
+    #  同hibernate一样  JPA 不指定存储引擎默认用的是MyISAM 得指定为Innodb
+    database-platform: org.hibernate.dialect.MySQL57Dialect

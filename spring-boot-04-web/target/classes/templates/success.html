@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>模板文件</title>
+</head>
+<body>
+    <h1>成功!!</h1>
+    <!-- 将获取到的数据写到标签体中  -->
+    <p th:text="${name}"></p>
+
+    <!--
+        header  是文件名
+
+    -->
+    <!-- 引入fragment声明的公共代码片段 -->
+    <div th:replace="header :: header_common"></div>
+    <!-- 引入id声明的公共代码片段 -->
+    <div th:replace="header :: #header_common_id"></div>
+
+        <!--
+        th:insert    保留引入时的自身原有标签
+        th:replace   不保留自身原有标签   直接替换
+
+        -->
+    <h2 th:insert="header :: #header_common_id"></h2>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<!--user : 第1个值,代表每次迭代出对象,名字任意取
+iterStat : 第2个值,代表每次迭代器内置对象, 名字任意取, 并有如下属性:
+index : 当前迭代下标   0 开始
+count : 当前迭代下标   1 开始
+size : 获取总记录数
+current : 当前迭代出的对象
+even/odd : 当前迭代是偶数还是奇数 (1开始算,返回布尔值   )
+first : 当前是否为第一个元素
+last : 当前是否为最后一个元素-->
+
+    <table border="1px">
+        <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>编号</th>
+        </tr>
+        <tr th:each="user,iterStat : ${userList}">      <!-- iterStat  迭代的内置对象  -->
+            <td th:text="${user.userName}"></td>
+            <td th:text="${user.gender} == 1 ? '男' : '女'"></td>
+            <td th:text="${iterStat.count}"></td>
+            <td th:text="${iterStat.current}"></td>
+            <td th:text="${iterStat.first}"/>
+            <td th:text="${iterStat.last}"/>
+            <td th:text="${iterStat.odd} ? '奇数' : '偶数'"/>
+        </tr>
+    </table>
+
+    <hr/>
+    <h3 th:if="not ${#lists.isEmpty(userList)}">UserList不为空</h3>
+    <h3 th:unless="${#lists.isEmpty(userList)}">unless是当false的时候显示</h3>
+
+    <div th:switch=" ${sex}">
+        <p th:case="1">女</p>
+        <p th:case="${man}">男</p>
+        <p th:case="*">变态</p>      <!--  *  为java中的default -->
+    </div>
+
+
+
+    <hr/>
+    <div th:text="${desc}"></div>            <!--  不会转义desc中的特殊字符 -->
+
+    <div th:utext="${desc}"></div>               <!--   会转义desc中的特殊字符  -->
+
+    <br/>
+    <!--  获取${session.user}中的对象 -->
+    <div th:object="${session.user}">
+        <!--  上面已经将对象获取出来了，下面直接写属性名即可获取到值 -->
+        <p>姓名：<span th:text="*{userName}"></span></p>
+        <p>姓名：<span th:text="*{gender} == 2 ? '男' : '女'"></span></p>
+    </div>
+
+    <h1 style="color: red">welcome to NYC</h1>
+</body>
+</html>

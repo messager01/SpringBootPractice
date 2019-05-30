@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    username: root
+    password: root
+#  8.0以上的驱动包   配置url要指定时区
+    url: jdbc:mysql://127.0.0.1:3306/bill?serverTimezone=GMT%2B8
+#  8.0 以上的驱动包   配置驱动名要+cj
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+

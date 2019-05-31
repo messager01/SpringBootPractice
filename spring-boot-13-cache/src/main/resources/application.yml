@@ -8,3 +8,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 
+  # 配置redis服务地址
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+
+
+

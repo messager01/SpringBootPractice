@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mengxuegu.mapper.ProviderMapper">
+    <delete id="deleteProvider">
+        delete from `provider` where pid =#{pid};
+    </delete>
+
+
+    <select id="getProviderByPid" resultType="com.mengxuegu.entities.Provider">
+        select * from `provider` where pid = #{pid};
+    </select>
+
+
+    <update id="updateProvider">
+       update `provider` set `provider_code`=#{providerCode},`providerName`=#{providerName},`people`=#{people},
+       `phone`=#{phone},`address`=#{address},`fax`=#{fax},`describe`=#{describe}
+       where `pid` = #{pid};
+    </update>
+
+    <insert id="addProvider" useGeneratedKeys="true" keyProperty="pid" keyColumn="pid">
+       insert into `provider` (`provider_code`,`providerName`,`people`,`phone`,`address`,`fax`,`describe`)
+        values (#{providerCode},#{providerName},#{people},#{phone},#{address},#{fax},#{describe})
+
+    </insert>
+
+
+</mapper>
+
+

@@ -54,11 +54,18 @@ public class UserService {
     *     其他参数：
     *     allEntries = true     会删除缓存中的所有数据
     *     beforeInvocation = true    在执行该方法之前就清空缓存   （默认的是在方法调用之后再删除缓存）
-    *     
+    *
      * */
     @CacheEvict(cacheNames = "user",key = "#id")      //  删除缓存中的数据
     public Integer deleteUserById(Integer id){
         userMapper.deleteUserById(id);
         return id;
     }
+
+
+    /*
+    *
+    * 如果启用了redis缓存后  springboot会自动的切换为redis缓存数据
+    *
+    * */
 }

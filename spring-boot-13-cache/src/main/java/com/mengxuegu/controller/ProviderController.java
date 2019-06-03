@@ -7,9 +7,13 @@ package com.mengxuegu.controller;/*
 
 import com.mengxuegu.entities.Provider;
 import com.mengxuegu.service.ProviderService;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.annotations.ApiIgnore;
 
 import javax.jnlp.PrintService;
 
@@ -19,8 +23,9 @@ public class ProviderController {
     @Autowired
     ProviderService providerService;
 
-
-    @GetMapping("/getProvider/{pid}")
+    @ApiOperation(value = "查询提供商信息",notes = "注意事项",httpMethod = "GET")
+    @ApiImplicitParams({@ApiImplicitParam(name = "pid",value = "提供商id",dataType = "int",paramType = "path")})
+    @GetMapping("provider/getProvider/{pid}")
     public Provider getProvider(@PathVariable("pid") Integer pid){
         Provider provider = providerService.getProviderByPid(pid);
         return provider;
